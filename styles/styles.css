@@ -2,11 +2,11 @@
 body {
     /* feel free to update these css variables for a quick theme */
     
-    --color1: white;
-    --color2: white;
-    --color3: white;
-    --color4: white;
-    --color5: white;
+    --magenta: #ba2575;
+    --indigo: #710be6;
+    --chartreuse: #90ff12;
+    --green: #39b372;
+    --orange: #f77e14;
     
     /* https://coolors.co/generate and click export -> scss to get the colors to copy and paste below*/
     
@@ -19,8 +19,12 @@ body {
     font-family: 'Titillium Web', sans-serif;
 }
 
+body{
+    background-color: var(--green);
+}
+
 main {
-    background-color: var(--color2);
+    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -29,7 +33,7 @@ main {
 }
 
 section {
-    background-color: var(--color5);
+    background-color: var(--orange);
     max-width: 80%;
     display: flex;
     flex-direction: column;
@@ -37,15 +41,15 @@ section {
     align-items: center;
     padding-top: var(--gutter);
     padding-bottom: var(--gutter);
-    margin-top: var(--gutter);`
+    margin-top: var(--gutter);
     margin-bottom: var(--gutter);
-    border: solid 2px var(--color1);
+    border: solid 2px var(--magenta);
 }
 
 header {
     display: flex;
     justify-content: flex-end;
-    background-color: var(--color3);
+    background-color: var(--indigo);
     height: var(--header-height);
     box-shadow: var(--shadow);
 }
@@ -63,7 +67,7 @@ h2 {
 header img {
     height: var(--header-height);
 }
-  
+
 footer {
     position: fixed;
     width: 100%;
@@ -72,6 +76,7 @@ footer {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    background-color: var(--color3);
+    background-color: var(--indigo);
+    color: var(--chartreuse);
     box-shadow: var(--footer-shadow);
 }
