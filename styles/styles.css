@@ -1,12 +1,12 @@
 
-body {
+* {
     /* feel free to update these css variables for a quick theme */
     
-    --magenta: #ba2575;
-    --indigo: #710be6;
-    --chartreuse: #90ff12;
-    --green: #39b372;
-    --orange: #f77e14;
+    --black: #0b0c10;
+    --dark-grey: #1f2833;
+    --light-grey: #c5c6c7;
+    --aqua: #66fcf1;
+    --teal: #45a29e;
     
     /* https://coolors.co/generate and click export -> scss to get the colors to copy and paste below*/
     
@@ -16,44 +16,70 @@ body {
     --gutter: 30px;
     --footer-height: 35px;
     
+    margin: 0;
+	padding: 0;
+	border: 0;
+    vertical-align: baseline;
+    box-sizing: border-box;
     font-family: 'Titillium Web', sans-serif;
 }
 
+html{
+    height: 100%;
+}
+
 body{
-    background-color: var(--green);
+    width: 100vw;
+    height: 100%;
+    background-color: var(--dark-grey);
+    /* flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center; */
 }
 
 main {
     width: 100vw;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: calc(var(--footer-height));
+    gap: 30px;
+    /* margin-bottom: calc(var(--footer-height)); */
 }
 
-section {
-    background-color: var(--orange);
-    max-width: 80%;
+form {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: var(--gutter);
-    padding-bottom: var(--gutter);
-    margin-top: var(--gutter);
-    margin-bottom: var(--gutter);
-    border: solid 2px var(--magenta);
+    padding: 20px;
 }
 
-header {
+input{
+    width: 250px;
+}
+
+.auth-container{
     display: flex;
-    justify-content: flex-end;
-    background-color: var(--indigo);
-    height: var(--header-height);
-    box-shadow: var(--shadow);
+    justify-content: center;
 }
 
+.auth-main{
+    display: flex;
+    flex-direction: row;
+}
+
+.left, .right{
+    background-color: var(--aqua);
+}
+
+button{
+    margin-top: 20px;
+    width: 100px;
+    background-color: var(--light-grey);
+    padding: 3px 0;
+    cursor: pointer;
+}
 
 h2 {
     font-size: 1.8rem;
@@ -66,6 +92,16 @@ h2 {
 
 header img {
     height: var(--header-height);
+}
+
+header {
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    background-color: var(--indigo);
+    height: var(--header-height);
+    box-shadow: var(--shadow);
+    width: 100%;
 }
 
 footer {
